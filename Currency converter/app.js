@@ -45,7 +45,10 @@ btn.addEventListener("click", async (evt) => {
     let response = await fetch(URL);
     let data = await response.json();
     console.log(data);
-    let rate = data[to_curr.value.toLowerCase()];
+    // const requiredRate = data.base_curr.to_curr;
+    // console.log(requiredRate);
+    let baseCurrencyData = data[base_curr.value.toLowerCase()];
+    let rate = baseCurrencyData[to_curr.value.toLowerCase()];
     console.log(rate);
 
 })
