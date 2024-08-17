@@ -5,6 +5,7 @@ const dropdowns = document.querySelectorAll(".dropdown select");
 const btn = document.querySelector("form button");
 const base_curr = document.querySelector(".from select");
 const to_curr = document.querySelector(".to select");
+const msg = document.querySelector(".msg");
 
 
 for (let select of dropdowns){
@@ -44,13 +45,13 @@ btn.addEventListener("click", async (evt) => {
     const URL = `${Base_URL}/${base_curr.value.toLowerCase()}.json`;
     let response = await fetch(URL);
     let data = await response.json();
-    console.log(data);
-    // const requiredRate = data.base_curr.to_curr;
-    // console.log(requiredRate);
+    // console.log(data);
     let baseCurrencyData = data[base_curr.value.toLowerCase()];
     let rate = baseCurrencyData[to_curr.value.toLowerCase()];
-    console.log(rate);
+    // console.log(rate);
 
+    let finalamount = amtVal * rate;
+    msg.innerText = `${amtVal} ${base_curr.value} = ${finalamount} ${to_curr.value}`;
 })
 
 

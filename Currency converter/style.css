@@ -4,19 +4,94 @@
     padding: 0px;
 }
 body{
+    background-color: #f5f1e3;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    background-color: #313638;
+    padding: 12px 0px;
+    position: relative;
+}
+@media(max-width: 400px){
+    .navbar{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    ul{
+        margin-top: 15px;
+        margin-left: 10px;
+        font-size: 0.8rem;
+    }
+    .logo{
+        margin-left: 30px;
+    }
+    .logo p{
+        font-size: 1rem;
+    }
+    .logo img{
+        height: 28px;
+    }
+    .container{
+
+    }
+    .form input{
+        width: 20vh;
+    }
+}
+.logo{
+    /* position: absolute;
+    left: 20px;
+    top: 10.5px; */
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.logo p{
+    margin-left: 5px;
+}
+.navbar ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 450px;
+    /* max-width: 50vh; */
+    /* width: 50vh; */
+}
+.navbar ul li{
+    list-style: none;
+    margin-right: 100px;
+}
+.navbar a{
+    /* font-family: 'Noto Sans', sans-serif; */
+    text-decoration: none;
+    color: white;
+    /* margin-right: 7rem; */
+    font-weight: 500;
+    transition: 0.3s;
+}
+.navbar a:hover{
+    background-color: white;
+    color: black;
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.5rem;
+}
+.outer-container{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background-color: #f5f1e3;
+    min-height: 90vh;
 }
 .container{
     background-color: #dddbcb;
-    /* background-color: white; */
     padding: 2rem;
     border-radius: 1rem;
-    min-height: 45vh;
     min-width: 40vh;
+    min-height: 43vh;
+    box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.3);
 }
 form{
     margin: 2rem 0 1rem 0;
@@ -54,7 +129,7 @@ form input{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 7rem;
+    width: 7.3rem;
     background-color: white;
     border-radius: 0.5rem;
 }
@@ -63,6 +138,8 @@ form input{
     width: auto;
 }
 .msg{
+    font-weight: 500;
+    font-size: 1.2rem;
     margin: 2rem 0 2rem 0;
     text-align: center;
 }
@@ -72,4 +149,7 @@ form button{
     background-color: #313638;
     color: white;
     cursor: pointer;
+}
+footer{
+    text-align: center;
 }
