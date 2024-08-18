@@ -7,69 +7,73 @@ body{
     background-color: #f5f1e3;
 }
 .navbar{
-    display: flex;
-    align-items: center;
-    /* justify-content: center; */
+    min-height: 46px;
     background-color: #313638;
     padding: 12px 0px;
-    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
-@media(max-width: 400px){
+@media(max-width: 420px){
     .navbar{
-        display: flex;
-        flex-wrap: wrap;
+        width: 100%;
+        /* padding: 5px 0px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 45px 1fr; */
+        display: block;
+        position: relative;
+        padding: 10px 20px;
     }
-    ul{
-        margin-top: 15px;
-        margin-left: 10px;
-        font-size: 0.8rem;
+    .menu{
+        position: absolute;
+        left: 0px;
+        top: 66px;
+        width: 101vw !important;
+        background-color: rgba(31, 36, 38, 0.952);
     }
-    .logo{
-        margin-left: 30px;
+    .navbar ul{
+        flex-direction: column;
     }
-    .logo p{
-        font-size: 1rem;
+    .navbar ul li{
+        padding: 10px 5px;
+        width: 100%;
     }
-    .logo img{
-        height: 28px;
+    .navbar ul a{
+        color: white;
     }
-    .container{
-
-    }
-    .form input{
-        width: 20vh;
+    .container {
+        min-width: 30vh; /* Adjusted for smaller screens */
+        min-height: 35vh; /* Adjusted for smaller screens */
+        box-sizing: border-box;
     }
 }
 .logo{
-    /* position: absolute;
-    left: 20px;
-    top: 10.5px; */
     color: white;
     display: flex;
     align-items: center;
     font-size: 1.3rem;
     font-weight: 500;
+    align-self: center;
 }
 .logo p{
     margin-left: 5px;
 }
+.menu{
+    place-self: center;
+    width: 45vh;
+}
 .navbar ul{
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin-left: 450px;
-    /* max-width: 50vh; */
-    /* width: 50vh; */
+    justify-content: space-between;
 }
 .navbar ul li{
     list-style: none;
-    margin-right: 100px;
 }
 .navbar a{
     /* font-family: 'Noto Sans', sans-serif; */
     text-decoration: none;
     color: white;
-    /* margin-right: 7rem; */
     font-weight: 500;
     transition: 0.3s;
 }
@@ -83,7 +87,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 90vh;
+    min-height: 88vh;
 }
 .container{
     background-color: #dddbcb;
@@ -92,6 +96,7 @@ body{
     min-width: 40vh;
     min-height: 43vh;
     box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
 }
 form{
     margin: 2rem 0 1rem 0;
